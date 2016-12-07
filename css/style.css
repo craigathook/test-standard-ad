@@ -1,0 +1,245 @@
+/*
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+
+body {
+  line-height: 1; }
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+nav ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+
+/* change colours to suit your needs */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none; }
+
+/* change colours to suit your needs */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold; }
+
+del {
+  text-decoration: line-through; }
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0; }
+
+input, select {
+  vertical-align: middle; }
+
+/*
+The provided mixins are intended to be used with variables directly
+
+.icon-home {
+  @include sprite-width($icon-home);
+}
+
+.icon-email {
+  @include sprite($icon-email);
+}
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+/*
+SCSS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: map-get($icon-home, 'width');
+}
+
+At the bottom of this section, we provide information about the spritesheet itself
+*/
+/*
+SCSS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: map-get($icon-home, 'width');
+}
+
+At the bottom of this section, we provide information about the spritesheet itself
+*/
+/** set up variables **/
+/*
+$collapsed-background-map
+$collapsed-foreground-map
+
+
+You need to use these functions to display the images
+
+
+This does a 1X sprite. 100% size of image in spritesheet.  Provide the map and the image name
+sprite ($collapsed-background-map, 'keep');
+
+This does a 2X sprite. 50% of image in spritesheet. 2:1 Provide the map and the image name
+sprite-retina ($collapsed-background-map, 'keep')
+
+*/
+.border, .left-collapsed-border, .right-collapsed-border, .top-collapsed-border, .bottom-collapsed-border {
+  background-color: black;
+  position: absolute;
+  pointer-events: none;
+  width: 1px;
+  height: 1px; }
+
+.left-collapsed-border {
+  height: 250px; }
+
+.right-collapsed-border {
+  height: 250px;
+  left: 299px; }
+
+.top-collapsed-border {
+  width: 300px; }
+
+.bottom-collapsed-border {
+  width: 300px;
+  top: 249px; }
+
+.size-collapsed, #adRoot, #adRoot .catch-all {
+  height: 250px;
+  width: 300px; }
+
+.catch-all, #adRoot .catch-all {
+  background-color: rgba(255, 255, 255, 0.01);
+  cursor: pointer;
+  position: absolute;
+  left: 0;
+  top: 0; }
+
+.basic-button, #adRoot .cta {
+  background-color: #ff96ff;
+  cursor: pointer;
+  position: absolute; }
+
+.hidden {
+  display: none; }
+
+.shown {
+  display: block; }
+
+.invisible, #adRoot {
+  opacity: 0; }
+
+#adRoot {
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  background-color: #666666;
+  cursor: pointer; }
+  #adRoot img {
+    position: absolute; }
+  #adRoot .cta {
+    width: 80px;
+    height: 20px;
+    background-color: #ff0000;
+    color: #666666;
+    text-align: center;
+    left: 110px;
+    top: 115px; }
+  #adRoot .cta-hover {
+    color: #0000FF; }
+  #adRoot .bg-image {
+    position: absolute;
+    width: 150px;
+    height: 59px;
+    left: 0;
+    background-image: url("../images/logo.jpg"); }
+  #adRoot .logo-sprite-retina {
+    background-image: url("../images/collapsed-background-sprite.jpg");
+    background-position: 0px 0px;
+    width: 4px;
+    height: 4px;
+    -webkit-transform-origin: left top;
+    -moz-transform-origin: left top;
+    -ms-transform-origin: left top;
+    -o-transform-origin: left top;
+    transform-origin: left top;
+    -webkit-transform: scale(0.5);
+    -moz-transform: scale(0.5);
+    -ms-transform: scale(0.5);
+    -o-transform: scale(0.5);
+    transform: scale(0.5);
+    position: absolute;
+    top: 0;
+    left: 20px; }
+  #adRoot .logo-sprite {
+    background-image: url("../images/collapsed-background-sprite.jpg");
+    background-position: 0px 0px;
+    width: 4px;
+    height: 4px;
+    position: absolute;
+    top: 0;
+    left: 40px; }
