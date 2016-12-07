@@ -27,6 +27,7 @@
         onStart: onStart
       });
       tl.add(TweenLite.to('#adRoot', 1, {opacity: 1}));
+      tl.add(TweenLite.to('#cta', 1, {rotation: 360}));
       //customize this function so that when called it kills all animation timelines, etc.
       return function destroy() {
         console.log('Kill Animations');
